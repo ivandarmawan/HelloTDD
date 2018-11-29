@@ -27,7 +27,7 @@ public class HelloWorldTest {
     
     @After
     public void tearDown() {
-        System.out.println("* HelloWorldTest: After method tearDown()");
+        System.out.println("* Geeraay wkwkwk ");
     }
 
     /**
