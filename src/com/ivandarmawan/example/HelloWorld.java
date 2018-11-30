@@ -28,5 +28,10 @@ public class HelloWorld {
         return message;
     }
     
+    public String greet(String name){
+        String message = "Hello" + " " + name;
+        return message;
+    }
+    
     
 }

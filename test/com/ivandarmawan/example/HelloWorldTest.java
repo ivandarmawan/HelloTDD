@@ -21,15 +21,9 @@ public class HelloWorldTest {
     
     @Before
     public void setUp() {
-        System.out.println("* HelloWorldTest: Before method setUP()");
         helloWorldInstance = new HelloWorld();
     }
     
-    @After
-    public void tearDown() {
-        System.out.println("* HelloWorldTest: After method tearDown()");
-    }
-
     /**
      * Test of formMessage method, of class HelloWorld.
      */
@@ -37,12 +31,23 @@ public class HelloWorldTest {
     public void testFormMessage() {
         String expResult = "Hello World";
         String result = helloWorldInstance.formMessage();
-        
-        System.out.println("* HelloWorldTest: Test method 1 testFormMessage");
-        
         assertEquals(expResult, result);
-        
-        //fail("The test case is a prototype.");
     }
+    
+    @Test
+    public void testMethodGreet(){
+        String expResult = "Hello Bob";
+        String result = helloWorldInstance.greet("Bob");
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testClassGreet(){
+        String expResult = "Hello Bob";
+        Greet greet = new Greet();
+        String result = greet.getName("Bob");
+        assertEquals(expResult, result);
+    }
+    
     
 }
